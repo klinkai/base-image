@@ -20,3 +20,6 @@ RUN wget http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/ap
 
 # Installing nodejs
 RUN apk add --update nodejs nodejs-npm
+
+# Installing yarn
+RUN npm install --global yarn
