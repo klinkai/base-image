@@ -25,13 +25,8 @@ RUN apk add --update nodejs nodejs-npm
 RUN npm install --global yarn
 
 # Testing installations
-RUN echo "Java version"
 RUN java -version
-RUN echo "Maven version"
 RUN mvn --version
-RUN echo "Node version"
 RUN node --version
-RUN echo "Npm version"
 RUN npm --version
-RUN echo "Yarn version"
 RUN yarn --version
