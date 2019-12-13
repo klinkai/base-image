@@ -2,10 +2,19 @@ FROM alpine:3.10
 MAINTAINER brunosilvafranca
 USER root
 
+# Installing ca certificates and openssl
+ RUN   apk update \                                                                                                                                                                                                                        
+  &&   apk add ca-certificates wget \                                                                                                                                                                                                      
+  &&   update-ca-certificates \
+  &&   apk add openssl
+
+# Installing wget
+RUN apk add --no-cache wget
+
 # Installing openjdk8
-RUN apk update
-RUN apk fetch openjdk8
-RUN apk add openjdk8
+RUN apk update \
+  &&   apk fetch openjdk8 \
+  &&   apk add openjdk8
 
 # Declaring maven variables
 ENV MAVEN_VERSION 3.6.0
