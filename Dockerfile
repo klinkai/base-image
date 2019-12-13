@@ -35,10 +35,3 @@ RUN apk add --update nodejs nodejs-npm
 
 # Installing yarn
 RUN npm install --global yarn
-
-# Testing installations
-RUN java -version
-RUN mvn --version
-RUN node --version
-RUN npm --version
-RUN yarn --version
