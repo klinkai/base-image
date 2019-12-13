@@ -33,5 +33,5 @@ RUN echo "Node version"
 RUN node --version
 RUN echo "Npm version"
 RUN npm --version
-RUN "Yarn version"
-RUN yarn
+RUN echo "Yarn version"
+RUN yarn --version
