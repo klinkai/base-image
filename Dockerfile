@@ -11,6 +11,9 @@ USER root
 # Installing wget
 RUN apk add --no-cache wget
 
+#Installing curl
+RUN apk --no-cache add curl
+
 # Installing openjdk8
 RUN apk update \
   &&   apk fetch openjdk8 \
